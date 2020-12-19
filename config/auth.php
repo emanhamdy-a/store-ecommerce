@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        // 'admin' => [
+        //     'driver' => 'session',
+        //     'provider' => 'admins',
+        // ],
+        // 'site' => [
+        //     'driver' => 'session',
+        //     'provider' => 'sites',
+        // ],
 
         'api' => [
             'driver' => 'token',
@@ -70,6 +78,14 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        // 'admin' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Admin::class,
+        // ],
+        // 'site' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Site::class,
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
