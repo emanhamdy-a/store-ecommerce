@@ -1,0 +1,5 @@
+$admin = new App\Models\Admin();
+$admin->name = 'eman';
+$admin->email = 'eman@example.com';
+$admin->password = Hash::make('12345678');
+$admin->save();
