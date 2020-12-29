@@ -40,7 +40,7 @@
             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
                   class="ft-user"></i> تعديل الملف الشحصي </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href=""><i class="ft-power"></i> تسجيل
+              <a class="dropdown-item" href="{{route('signout')}}"><i class="ft-power"></i> تسجيل
                 الخروج </a>
             </div>
           </li>

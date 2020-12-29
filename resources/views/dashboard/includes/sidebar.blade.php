@@ -13,9 +13,10 @@
             class="badge badge badge-info badge-pill float-right mr-2"></span>
         </a>
         <ul class="menu-content">
-          <li class="active"><a class="menu-item" href="" data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          <li class="active"><a class="menu-item" href=""
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
           </li>
-          <li><a class="menu-item" href="" ')}}" data-i18n="nav.dash.crypto">أضافة
+          <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
               لغة جديده </a>
           </li>
         </ul>
@@ -23,119 +24,168 @@
 
 
       <li class="nav-item"><a href=""><i class="la la-group"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">الاقسام الرئيسيه </span>
+          <span class="menu-title" data-i18n="nav.dash.main">الاقسام  </span>
           <span
             class="badge badge badge-danger badge-pill float-right mr-2"></span>
         </a>
         <ul class="menu-content">
-          <li class="active"><a class="menu-item" href="" data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          <li class="active"><a class="menu-item" href=""
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
           </li>
-          <li><a class="menu-item" href="" ')}}" data-i18n="nav.dash.crypto">أضافة
-               قسم جديد </a>
+          <li><a class="menu-item" href=""
+               data-i18n="nav.dash.crypto">أضافة
+              قسم جديد </a>
           </li>
         </ul>
       </li>
 
+
+      {{--  <li class="nav-item"><a href=""><i class="la la-group"></i>
+            <span class="menu-title" data-i18n="nav.dash.main">الاقسام الفرعية   </span>
+            <span
+              class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Category::child() -> count()}}</span>
+          </a>
+          <ul class="menu-content">
+            <li class="active"><a class="menu-item" href="admin.subcategories')}}"
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+            </li>
+            <li><a class="menu-item" href="admin.subcategories.create')}}" data-i18n="nav.dash.crypto">أضافة
+                قسم فرعي جديد </a>
+            </li>
+          </ul>
+        </li>
+
+
+  --}}
+       @can('brands')
       <li class="nav-item"><a href=""><i class="la la-group"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">الاقسام الفرعية   </span>
+          <span class="menu-title" data-i18n="nav.dash.main"> الماركات التجارية  </span>
           <span
-            class="badge badge badge-danger badge-pill float-right mr-2">400</span>
+            class="badge badge badge-danger badge-pill float-right mr-2">{{\App\Models\Brand::count()}}</span>
         </a>
         <ul class="menu-content">
-          <li class="active"><a class="menu-item" href="" data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          <li class="active"><a class="menu-item" href="admin.brands')}}"
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
           </li>
-          <li><a class="menu-item" href="" ')}}" data-i18n="nav.dash.crypto">أضافة
-              قسم فرعي جديد </a>
+          <li><a class="menu-item" href="admin.brands.create')}}" data-i18n="nav.dash.crypto">أضافة
+              ماركة جديده </a>
+          </li>
+        </ul>
+      </li>
+      @endcan
+
+
+      <li class="nav-item"><a href=""><i class="la la-group"></i>
+          <span class="menu-title" data-i18n="nav.dash.main"> العلامات tags  </span>
+          <span
+            class="badge badge badge-danger badge-pill float-right mr-2"></span>
+        </a>
+        <ul class="menu-content">
+          <li class="active"><a class="menu-item" href=""
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          </li>
+          <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
+            </a>
           </li>
         </ul>
       </li>
 
       <li class="nav-item"><a href=""><i class="la la-male"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
+          <span class="menu-title" data-i18n="nav.dash.main">المنتجات  </span>
+          <span
+            class="badge badge badge-success badge-pill float-right mr-2"> </span>
+        </a>
+        <ul class="menu-content">
+          <li class="active"><a class="menu-item" href=""
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          </li>
+          <li><a class="menu-item" href=""
+               data-i18n="nav.dash.crypto">أضافة
+              منتج جديد </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href=""><i class="la la-male"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">خصائص المنتج  </span>
           <span
             class="badge badge badge-success badge-pill float-right mr-2"></span>
         </a>
         <ul class="menu-content">
-          <li class="active"><a class="menu-item" href="" data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          <li class="active"><a class="menu-item" href="admin.attributes')}}"
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
           </li>
-          <li><a class="menu-item" href="" ')}}" data-i18n="nav.dash.crypto">أضافة
-              متجر  </a>
+          <li><a class="menu-item" href="admin.attributes.create')}}" data-i18n="nav.dash.crypto">أاضافة
+              جديدة </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href=""><i class="la la-male"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">قيم الخصائص </span>
+        </a>
+        <ul class="menu-content">
+          <li class="active"><a class="menu-item" href="admin.options')}}"
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          </li>
+          <li><a class="menu-item" href="admin.options.create')}}" data-i18n="nav.dash.crypto">أاضافة
+              جديدة </a>
           </li>
         </ul>
       </li>
 
 
       <li class="nav-item"><a href=""><i class="la la-male"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
-          <span
-            class="badge badge badge-warning  badge-pill float-right mr-2"></span>
+          <span class="menu-title" data-i18n="nav.dash.main">مستخدمي لوحه التحكم </span>
         </a>
         <ul class="menu-content">
-          <li class="active"><a class="menu-item" href=""
-                  data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+          <li class="active"><a class="menu-item" href="admin.users.index')}}"
+            data-i18n="nav.dash.ecommerce"> عرض الكل </a>
           </li>
-          <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
-              طالب </a>
+          <li><a class="menu-item" href="admin.users.create')}}"
+            data-i18n="nav.dash.crypto">أاضافة
+              جديدة </a>
           </li>
         </ul>
       </li>
-
-
-      <li class="nav-item">
-        <a href=""><i class="la la-male"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
-          <span
-            class="badge badge badge-danger  badge-pill float-right mr-2">0</span>
-        </a>
-        <ul class="menu-content">
-          <li class="active"><a class="menu-item" href=""
-                  data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>
-          </li>
-        </ul>
-      </li>
-
-
       <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
-                                      data-i18n="nav.templates.main">Templates</span></a>
+          data-i18n="nav.templates.main"> {{__('admin/sidebar.settings')}}</span></a>
         <ul class="menu-content">
-          <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
+          <li><a class="menu-item" href="#"
+               data-i18n="nav.templates.vert.main"> {{__('admin/sidebar.shipping methods')}} </a>
             <ul class="menu-content">
-              <li><a class="menu-item" href="../vertical-menu-template"
-               data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
+              <li><a class="menu-item" href="{{route('edit.shippings.methods','free')}}"
+                   data-i18n="nav.templates.vert.classic_menu">توصيل مجاني </a>
               </li>
-              <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
+              <li><a class="menu-item" href="{{route('edit.shippings.methods','inner')}}"> توصيل
+                  داخلي </a>
               </li>
-              <li><a class="menu-item" href="../vertical-compact-menu-template"
-               data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-              </li>
-              <li><a class="menu-item" href="../vertical-content-menu-template"
-               data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-              </li>
-              <li><a class="menu-item" href="../vertical-overlay-menu-template"
-               data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
+              <li><a class="menu-item" href="{{route('edit.shippings.methods','outer')}}"
+                   data-i18n="nav.templates.vert.compact_menu"> توصيل خارجي </a>
               </li>
             </ul>
           </li>
-          <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
+
+          <li><a class="menu-item" href="#"
+               data-i18n="nav.templates.vert.main"> {{__('admin/sidebar.main slider')}} </a>
             <ul class="menu-content">
-              <li><a class="menu-item" href="../horizontal-menu-template"
-               data-i18n="nav.templates.horz.classic">Classic</a>
-              </li>
-              <li><a class="menu-item" href="../horizontal-menu-template-nav"
-               data-i18n="nav.templates.horz.top_icon">Full Width</a>
+              <li><a class="menu-item" href="admin.sliders.create')}}"
+                   data-i18n="nav.templates.vert.classic_menu">صور الاسليدر </a>
               </li>
             </ul>
           </li>
+
+
         </ul>
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus"
-                                    data-toggle="tooltip"
-                                    data-placement="right"
-                                    data-original-title="Layouts"></i>
+    data-toggle="tooltip"
+    data-placement="right"
+    data-original-title="Layouts"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title"
-                                     data-i18n="nav.page_layouts.main">Page layouts</span><span
+         data-i18n="nav.page_layouts.main">Page layouts</span><span
             class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="layout-1-column.html" data-i18n="nav.page_layouts.1_column">1
@@ -147,16 +197,16 @@
           <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">Content Sidebar</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="layout-content-left-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns.left_sidebar">Left sidebar</a>
+                   data-i18n="nav.page_layouts.3_columns.left_sidebar">Left sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-left-sticky-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns.left_sticky_sidebar">Left sticky sidebar</a>
+                   data-i18n="nav.page_layouts.3_columns.left_sticky_sidebar">Left sticky sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-right-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns.right_sidebar">Right sidebar</a>
+                   data-i18n="nav.page_layouts.3_columns.right_sidebar">Right sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-right-sticky-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns.right_sticky_sidebar">Right sticky sidebar</a>
+                   data-i18n="nav.page_layouts.3_columns.right_sticky_sidebar">Right sticky sidebar</a>
               </li>
             </ul>
           </li>
@@ -164,19 +214,19 @@
               Sidebar</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="layout-content-detached-left-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns_detached.detached_left_sidebar">Detached left
+                   data-i18n="nav.page_layouts.3_columns_detached.detached_left_sidebar">Detached left
                   sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-detached-left-sticky-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns_detached.detached_sticky_left_sidebar">Detached
+                   data-i18n="nav.page_layouts.3_columns_detached.detached_sticky_left_sidebar">Detached
                   sticky left sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-detached-right-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns_detached.detached_right_sidebar">Detached right
+                   data-i18n="nav.page_layouts.3_columns_detached.detached_right_sidebar">Detached right
                   sidebar</a>
               </li>
               <li><a class="menu-item" href="layout-content-detached-right-sticky-sidebar.html"
-               data-i18n="nav.page_layouts.3_columns_detached.detached_sticky_right_sidebar">Detached
+                   data-i18n="nav.page_layouts.3_columns_detached.detached_sticky_right_sidebar">Detached
                   sticky right sidebar</a>
               </li>
             </ul>
@@ -217,7 +267,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title"
-                                     data-i18n="nav.navbars.main">Navbars</span></a>
+         data-i18n="nav.navbars.main">Navbars</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">Navbar Light</a>
           </li>
@@ -235,11 +285,11 @@
           <li><a class="menu-item" href="#" data-i18n="nav.navbars.nav_hide_on_scroll.main">Hide on Scroll</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="navbar-hide-on-scroll-top.html"
-               data-i18n="nav.navbars.nav_hide_on_scroll.nav_hide_on_scroll_top">Hide on Scroll
+                   data-i18n="nav.navbars.nav_hide_on_scroll.nav_hide_on_scroll_top">Hide on Scroll
                   Top</a>
               </li>
               <li><a class="menu-item" href="navbar-hide-on-scroll-bottom.html"
-               data-i18n="nav.navbars.nav_hide_on_scroll.nav_hide_on_scroll_bottom">Hide on Scroll
+                   data-i18n="nav.navbars.nav_hide_on_scroll.nav_hide_on_scroll_bottom">Hide on Scroll
                   Bottom</a>
               </li>
             </ul>
@@ -253,29 +303,29 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-arrows-v"></i><span class="menu-title"
-                                      data-i18n="nav.vertical_nav.main">Vertical Nav</span></a>
+          data-i18n="nav.vertical_nav.main">Vertical Nav</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.vertical_nav.vertical_navigation_types.main">Navigation
               Types</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="../vertical-menu-template"
-               data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_menu">Vertical
+                   data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_menu">Vertical
                   Menu</a>
               </li>
               <li><a class="menu-item" href="../vertical-modern-menu-template"
-               data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_modern-menu">Vertical
+                   data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_modern-menu">Vertical
                   Modern Menu</a>
               </li>
               <li><a class="menu-item" href="../vertical-overlay-menu-template"
-               data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_overlay">Vertical
+                   data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_overlay">Vertical
                   Overlay</a>
               </li>
               <li><a class="menu-item" href="../vertical-compact-menu-template"
-               data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_compact">Vertical
+                   data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_compact">Vertical
                   Compact</a>
               </li>
               <li><a class="menu-item" href="../vertical-content-menu-template"
-               data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_content">Vertical
+                   data-i18n="nav.vertical_nav.vertical_navigation_types.vertical_content">Vertical
                   Content</a>
               </li>
             </ul>
@@ -322,17 +372,17 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-arrows-h"></i><span class="menu-title"
-                                      data-i18n="nav.horz_nav.main">Horizontal Nav</span></a>
+          data-i18n="nav.horz_nav.main">Horizontal Nav</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.horz_nav.horizontal_navigation_types.main">Navigation
               Types</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="../horizontal-menu-template"
-               data-i18n="nav.horz_nav.horizontal_navigation_types.horizontal_left_icon_navigation">Left
+                   data-i18n="nav.horz_nav.horizontal_navigation_types.horizontal_left_icon_navigation">Left
                   Icon Navigation</a>
               </li>
               <li><a class="menu-item" href="../horizontal-menu-template-nav"
-               data-i18n="nav.horz_nav.horizontal_navigation_types.horizontal_menu_template_nav">Top
+                   data-i18n="nav.horz_nav.horizontal_navigation_types.horizontal_menu_template_nav">Top
                   Icon Navigation</a>
               </li>
             </ul>
@@ -340,7 +390,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-header"></i><span class="menu-title"
-                                    data-i18n="nav.page_headers.main">Page Headers</span></a>
+        data-i18n="nav.page_headers.main">Page Headers</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="headers-breadcrumbs-basic.html"
                data-i18n="nav.page_headers.headers_breadcrumbs_basic">Breadcrumbs basic</a>
@@ -381,7 +431,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-download"></i><span class="menu-title"
-                                      data-i18n="nav.footers.main">Footers</span></a>
+          data-i18n="nav.footers.main">Footers</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="footer-light.html" data-i18n="nav.footers.footer_light">Footer
               Light</a>
@@ -401,12 +451,12 @@
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.general">General</span><i class="la la-ellipsis-h ft-minus"
-                                    data-toggle="tooltip"
-                                    data-placement="right"
-                                    data-original-title="General"></i>
+    data-toggle="tooltip"
+    data-placement="right"
+    data-original-title="General"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-paint-brush"></i><span class="menu-title"
-                                       data-i18n="nav.color_palette.main">Color Palette</span></a>
+           data-i18n="nav.color_palette.main">Color Palette</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="color-palette-primary.html"
                data-i18n="nav.color_palette.color_palette_primary">Primary palette</a>
@@ -454,7 +504,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-puzzle-piece"></i><span class="menu-title"
-                                        data-i18n="nav.starter_kit.main">Starter kit</span></a>
+            data-i18n="nav.starter_kit.main">Starter kit</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="../../../starter-kit/rtl/vertical-menu-template/layout-1-column.html"
                data-i18n="nav.starter_kit.1_column">1 column</a>
@@ -468,22 +518,22 @@
             <ul class="menu-content">
               <li><a class="menu-item"
                    href="../../../starter-kit/rtl/vertical-menu-template/layout-content-detached-left-sidebar.html"
-               data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_left_sidebar">Detached
+                   data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_left_sidebar">Detached
                   left sidebar</a>
               </li>
               <li><a class="menu-item"
                    href="../../../starter-kit/rtl/vertical-menu-template/layout-content-detached-left-sticky-sidebar.html"
-               data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_left_sidebar">Detached
+                   data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_left_sidebar">Detached
                   sticky left sidebar</a>
               </li>
               <li><a class="menu-item"
                    href="../../../starter-kit/rtl/vertical-menu-template/layout-content-detached-right-sidebar.html"
-               data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_right_sidebar">Detached
+                   data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_right_sidebar">Detached
                   right sidebar</a>
               </li>
               <li><a class="menu-item"
                    href="../../../starter-kit/rtl/vertical-menu-template/layout-content-detached-right-sticky-sidebar.html"
-               data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_right_sidebar">Detached
+                   data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_right_sidebar">Detached
                   sticky right sidebar</a>
               </li>
             </ul>
@@ -529,14 +579,14 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="changelog.html"><i class="la la-copy"></i><span class="menu-title"
-    data-i18n="nav.changelog.main">Changelog</span><span
+               data-i18n="nav.changelog.main">Changelog</span><span
             class="badge badge badge-pill badge-warning float-right">1.0</span></a>
       </li>
       <li class="disabled nav-item"><a href="#"><i class="la la-eye-slash"></i><span class="menu-title"
-    data-i18n="nav.disabled_menu.main">Disabled Menu</span></a>
+               data-i18n="nav.disabled_menu.main">Disabled Menu</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-android"></i><span class="menu-title"
-                                     data-i18n="nav.menu_levels.main">Menu levels</span></a>
+         data-i18n="nav.menu_levels.main">Menu levels</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level">Second level</a>
           </li>
@@ -544,19 +594,19 @@
               child</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="#"
-               data-i18n="nav.menu_levels.second_level_child.third_level">Third level</a>
+                   data-i18n="nav.menu_levels.second_level_child.third_level">Third level</a>
               </li>
               <li><a class="menu-item" href="#"
-               data-i18n="nav.menu_levels.second_level_child.third_level_child.main">Third level
+                   data-i18n="nav.menu_levels.second_level_child.third_level_child.main">Third level
                   child</a>
                 <ul class="menu-content">
                   <li><a class="menu-item" href="#"
-                   data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1">Fourth
-                      level</a>
+             data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1">Fourth
+            level</a>
                   </li>
                   <li><a class="menu-item" href="#"
-                   data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2">Fourth
-                      level</a>
+             data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2">Fourth
+            level</a>
                   </li>
                 </ul>
               </li>
@@ -566,18 +616,18 @@
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.pages">Pages</span><i class="la la-ellipsis-h ft-minus"
-                                  data-toggle="tooltip"
-                                  data-placement="right"
-                                  data-original-title="Pages"></i>
+  data-toggle="tooltip"
+  data-placement="right"
+  data-original-title="Pages"></i>
       </li>
       <li class=" nav-item"><a href="email-application.html"><i class="la la-envelope"></i><span
             class="menu-title" data-i18n="">Email Application</span></a>
       </li>
       <li class=" nav-item"><a href="chat-application.html"><i class="la la-comments"></i><span class="menu-title"
-         data-i18n="">Chat Application</span></a>
+                    data-i18n="">Chat Application</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-briefcase"></i><span class="menu-title"
-                                       data-i18n="nav.project.main">Project</span></a>
+           data-i18n="nav.project.main">Project</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="project-summary.html" data-i18n="nav.project.project_summary">Project
               Summary</a>
@@ -591,11 +641,11 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="scrumboard.html"><i class="la la-check-square"></i><span class="menu-title"
-       data-i18n="nav.scrumboard.main">Scrumboard</span><span
+                  data-i18n="nav.scrumboard.main">Scrumboard</span><span
             class="badge badge badge-info float-right">Update</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-clipboard"></i><span class="menu-title"
-                                       data-i18n="nav.invoice.main">Invoice</span></a>
+           data-i18n="nav.invoice.main">Invoice</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="invoice-summary.html" data-i18n="nav.invoice.invoice_summary">Invoice
               Summary</a>
@@ -609,7 +659,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-film"></i><span class="menu-title"
-                                    data-i18n="nav.timelines.main">Timelines</span></a>
+        data-i18n="nav.timelines.main">Timelines</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="timeline-center.html" data-i18n="nav.timelines.timeline_center">Timelines
               Center</a>
@@ -626,7 +676,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-user"></i><span class="menu-title"
-                                    data-i18n="nav.users.main">Users</span></a>
+        data-i18n="nav.users.main">Users</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="user-profile.html" data-i18n="nav.users.user_profile">Users
               Profile</a>
@@ -639,7 +689,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-image"></i><span class="menu-title"
-                                     data-i18n="nav.gallery_pages.main">Gallery</span></a>
+         data-i18n="nav.gallery_pages.main">Gallery</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="gallery-grid.html" data-i18n="nav.gallery_pages.gallery_grid">Gallery
               Grid</a>
@@ -659,7 +709,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-search"></i><span class="menu-title"
-                                    data-i18n="nav.search_pages.main">Search</span></a>
+        data-i18n="nav.search_pages.main">Search</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="search-page.html" data-i18n="nav.search_pages.search_page">Search
               Page</a>
@@ -676,7 +726,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-unlock"></i><span class="menu-title"
-                                    data-i18n="nav.login_register_pages.main">Authentication</span></a>
+        data-i18n="nav.login_register_pages.main">Authentication</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="login-simple.html" data-i18n="nav.login_register_pages.login_simple">Login
               Simple</a>
@@ -717,7 +767,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-warning"></i><span class="menu-title"
-                                     data-i18n="nav.error_pages.main">Error</span></a>
+         data-i18n="nav.error_pages.main">Error</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="error-400.html" data-i18n="nav.error_pages.error_400">Error 400</a>
           </li>
@@ -747,18 +797,18 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-file-text"></i><span class="menu-title"
-                                       data-i18n="nav.other_pages.main">Others</span></a>
+           data-i18n="nav.other_pages.main">Others</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.other_pages.coming_soon.main">Coming Soon</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="coming-soon-flat.html"
-               data-i18n="nav.other_pages.coming_soon.coming_soon_flat">Flat</a>
+                   data-i18n="nav.other_pages.coming_soon.coming_soon_flat">Flat</a>
               </li>
               <li><a class="menu-item" href="coming-soon-bg-image.html"
-               data-i18n="nav.other_pages.coming_soon.coming_soon_bg_image">Bg image</a>
+                   data-i18n="nav.other_pages.coming_soon.coming_soon_bg_image">Bg image</a>
               </li>
               <li><a class="menu-item" href="coming-soon-bg-video.html"
-               data-i18n="nav.other_pages.coming_soon.coming_soon_bg_video">Bg video</a>
+                   data-i18n="nav.other_pages.coming_soon.coming_soon_bg_video">Bg video</a>
               </li>
             </ul>
           </li>
@@ -769,12 +819,12 @@
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.ui">User Interface</span><i class="la la-ellipsis-h ft-minus"
-                                      data-toggle="tooltip"
-                                      data-placement="right"
-                                      data-original-title="User Interface"></i>
+      data-toggle="tooltip"
+      data-placement="right"
+      data-original-title="User Interface"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-tablet"></i><span class="menu-title"
-                                    data-i18n="nav.cards.main">Cards</span><span
+        data-i18n="nav.cards.main">Cards</span><span
             class="badge badge badge-success float-right mr-2">New</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="card-bootstrap.html"
@@ -792,7 +842,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-fire"></i><span class="menu-title"
-                                    data-i18n="nav.advance_cards.main">Advance Cards</span></a>
+        data-i18n="nav.advance_cards.main">Advance Cards</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="card-statistics.html" data-i18n="nav.cards.card_statistics">Statistics</a>
           </li>
@@ -812,7 +862,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-compass"></i><span class="menu-title"
-                                     data-i18n="nav.content.main">Content</span></a>
+         data-i18n="nav.content.main">Content</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="content-grid.html" data-i18n="nav.content.content_grid">Grid</a>
           </li>
@@ -830,7 +880,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-server"></i><span class="menu-title"
-                                    data-i18n="nav.components.main">Components</span></a>
+        data-i18n="nav.components.main">Components</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="component-alerts.html" data-i18n="nav.components.component_alerts">Alerts</a>
           </li>
@@ -839,11 +889,11 @@
           <li><a class="menu-item" href="#" data-i18n="nav.components.components_buttons.main">Buttons</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="component-buttons-basic.html"
-               data-i18n="nav.components.components_buttons.component_buttons_basic">Basic
+                   data-i18n="nav.components.components_buttons.component_buttons_basic">Basic
                   Buttons</a>
               </li>
               <li><a class="menu-item" href="component-buttons-extended.html"
-               data-i18n="nav.components.components_buttons.component_buttons_extended">Extended
+                   data-i18n="nav.components.components_buttons.component_buttons_extended">Extended
                   Buttons</a>
               </li>
             </ul>
@@ -899,7 +949,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-diamond"></i><span class="menu-title"
-                                     data-i18n="nav.extra_components.main">Extra Components</span></a>
+         data-i18n="nav.extra_components.main">Extra Components</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="ex-component-sweet-alerts.html"
                data-i18n="nav.extra_components.ex_component_sweet_alerts">Sweet Alerts</a>
@@ -940,7 +990,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-eye"></i><span class="menu-title"
-                                   data-i18n="nav.icons.main">Icons</span></a>
+       data-i18n="nav.icons.main">Icons</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="icons-feather.html" data-i18n="nav.icons.icons_feather">Feather</a>
           </li>
@@ -956,16 +1006,16 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="animation.html"><i class="la la-spinner spinner"></i><span class="menu-title"
-         data-i18n="nav.animation.main">Animation</span></a>
+                    data-i18n="nav.animation.main">Animation</span></a>
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.forms">Forms</span><i class="la la-ellipsis-h ft-minus"
-                                  data-toggle="tooltip"
-                                  data-placement="right"
-                                  data-original-title="Forms"></i>
+  data-toggle="tooltip"
+  data-placement="right"
+  data-original-title="Forms"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-terminal"></i><span class="menu-title"
-                                      data-i18n="nav.form_elements.main">Form Elements</span></a>
+          data-i18n="nav.form_elements.main">Form Elements</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="form-inputs.html" data-i18n="nav.form_elements.form_inputs">Form
               Inputs</a>
@@ -988,16 +1038,16 @@
           <li><a class="menu-item" href="#" data-i18n="nav.form_elements.form_select.main">Select</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="form-select2.html"
-               data-i18n="nav.form_elements.form_select.form_select2">Select2</a>
+                   data-i18n="nav.form_elements.form_select.form_select2">Select2</a>
               </li>
               <li><a class="menu-item" href="form-selectize.html"
-               data-i18n="nav.form_elements.form_select.form_selectize">Selectize</a>
+                   data-i18n="nav.form_elements.form_select.form_selectize">Selectize</a>
               </li>
               <li><a class="menu-item" href="form-selectivity.html"
-               data-i18n="nav.form_elements.form_select.form_selectivity">Selectivity</a>
+                   data-i18n="nav.form_elements.form_select.form_selectivity">Selectivity</a>
               </li>
               <li><a class="menu-item" href="form-select-box-it.html"
-               data-i18n="nav.form_elements.form_select.form_select_box_it">Select Box It</a>
+                   data-i18n="nav.form_elements.form_select.form_select_box_it">Select Box It</a>
               </li>
             </ul>
           </li>
@@ -1012,7 +1062,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-file-text"></i><span class="menu-title"
-                                       data-i18n="nav.form_layouts.main">Form Layouts</span></a>
+           data-i18n="nav.form_layouts.main">Form Layouts</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="form-layout-basic.html"
                data-i18n="nav.form_layouts.form_layout_basic">Basic Forms</a>
@@ -1041,7 +1091,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-paste"></i><span class="menu-title"
-                                     data-i18n="nav.form_wizard.main">Form Wizard</span></a>
+         data-i18n="nav.form_wizard.main">Form Wizard</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="form-wizard-circle-style.html"
                data-i18n="nav.form_wizard.form_wizard_circle_style">Circle Style</a>
@@ -1052,16 +1102,16 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="form-repeater.html"><i class="la la-repeat"></i><span class="menu-title"
-      data-i18n="nav.form_repeater.main">Form Repeater</span></a>
+                 data-i18n="nav.form_repeater.main">Form Repeater</span></a>
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.tables">Tables</span><i class="la la-ellipsis-h ft-minus"
-                                    data-toggle="tooltip"
-                                    data-placement="right"
-                                    data-original-title="Tables"></i>
+    data-toggle="tooltip"
+    data-placement="right"
+    data-original-title="Tables"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-table"></i><span class="menu-title"
-                                     data-i18n="nav.bootstrap_tables.main">Bootstrap Tables</span></a>
+         data-i18n="nav.bootstrap_tables.main">Bootstrap Tables</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="table-basic.html" data-i18n="nav.bootstrap_tables.table_basic">Basic
               Tables</a>
@@ -1081,7 +1131,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-th"></i><span class="menu-title"
-                                  data-i18n="nav.data_tables.main">DataTables</span></a>
+      data-i18n="nav.data_tables.main">DataTables</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="dt-basic-initialization.html"
                data-i18n="nav.data_tables.dt_basic_initialization">Basic Initialisation</a>
@@ -1099,7 +1149,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-th-large"></i><span class="menu-title"
-                                      data-i18n="nav.datatable_extensions.main">DataTables Ext.</span></a>
+          data-i18n="nav.datatable_extensions.main">DataTables Ext.</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="dt-extensions-autofill.html"
                data-i18n="nav.datatable_extensions.dt_extensions_autofill">AutoFill</a>
@@ -1107,26 +1157,26 @@
           <li><a class="menu-item" href="#" data-i18n="nav.datatable_extensions.datatable_buttons.main">Buttons</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="dt-extensions-buttons-basic.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_basic">Basic
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_basic">Basic
                   Buttons</a>
               </li>
               <li><a class="menu-item" href="dt-extensions-buttons-html-5-data-export.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_html_5_data_export">HTML
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_html_5_data_export">HTML
                   5 Data Export</a>
               </li>
               <li><a class="menu-item" href="dt-extensions-buttons-flash-data-export.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_flash_data_export">Flash
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_flash_data_export">Flash
                   Data Export</a>
               </li>
               <li><a class="menu-item" href="dt-extensions-buttons-column-visibility.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_column_visibility">Column
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_column_visibility">Column
                   Visibility</a>
               </li>
               <li><a class="menu-item" href="dt-extensions-buttons-print.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_print">Print</a>
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_print">Print</a>
               </li>
               <li><a class="menu-item" href="dt-extensions-buttons-api.html"
-               data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_api">API</a>
+                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_api">API</a>
               </li>
             </ul>
           </li>
@@ -1157,7 +1207,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-th-list"></i><span class="menu-title"
-                                     data-i18n="nav.handson_table.main">Handson Table</span></a>
+         data-i18n="nav.handson_table.main">Handson Table</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="handson-table-appearance.html"
                data-i18n="nav.handson_table.handson_table_appearance">Appearance</a>
@@ -1189,16 +1239,16 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="table-jsgrid.html"><i class="la la-table"></i><span class="menu-title"
-      data-i18n="nav.table_jsgrid.main">jsGrid</span></a>
+                 data-i18n="nav.table_jsgrid.main">jsGrid</span></a>
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.addons">Add Ons</span><i class="la la-ellipsis-h ft-minus"
-                                     data-toggle="tooltip"
-                                     data-placement="right"
-                                     data-original-title="Add Ons"></i>
+     data-toggle="tooltip"
+     data-placement="right"
+     data-original-title="Add Ons"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-edit"></i><span class="menu-title"
-                                    data-i18n="nav.editors.main">Editors</span></a>
+        data-i18n="nav.editors.main">Editors</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="editor-quill.html" data-i18n="nav.editors.editor_quill">Quill</a>
           </li>
@@ -1213,17 +1263,17 @@
               Editor</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="code-editor-codemirror.html"
-               data-i18n="nav.editors.code_editor_codemirror.code_editor_codemirror">CodeMirror</a>
+                   data-i18n="nav.editors.code_editor_codemirror.code_editor_codemirror">CodeMirror</a>
               </li>
               <li><a class="menu-item" href="code-editor-ace.html"
-               data-i18n="nav.editors.code_editor_codemirror.code_editor_ace">Ace</a>
+                   data-i18n="nav.editors.code_editor_codemirror.code_editor_ace">Ace</a>
               </li>
             </ul>
           </li>
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-calendar"></i><span class="menu-title"
-                                      data-i18n="nav.pickers.main">Pickers</span></a>
+          data-i18n="nav.pickers.main">Pickers</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="pickers-date-&amp;-time-picker.html"
                data-i18n="nav.pickers.pickers_date_time_picker">Date &amp; Time Picker</a>
@@ -1234,7 +1284,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-code-fork"></i><span class="menu-title"
-                                       data-i18n="nav.jquery_ui.main">jQuery UI</span></a>
+           data-i18n="nav.jquery_ui.main">jQuery UI</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="jquery-ui-interactions.html"
                data-i18n="nav.jquery_ui.jquery_ui_interactions">Interactions</a>
@@ -1260,16 +1310,16 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="add-on-block-ui.html"><i class="la la-terminal"></i><span class="menu-title"
-        data-i18n="nav.add_on_block_ui.main">Block UI</span></a>
+                   data-i18n="nav.add_on_block_ui.main">Block UI</span></a>
       </li>
       <li class=" nav-item"><a href="add-on-image-cropper.html"><i class="la la-crop"></i><span class="menu-title"
-         data-i18n="nav.add_on_image_cropper.main">Image Cropper</span></a>
+                    data-i18n="nav.add_on_image_cropper.main">Image Cropper</span></a>
       </li>
       <li class=" nav-item"><a href="add-on-drag-drop.html"><i class="la la-mouse-pointer"></i><span
             class="menu-title" data-i18n="nav.add_on_drag_drop.main">Drag &amp; Drop</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-cloud-upload"></i><span class="menu-title"
-                                        data-i18n="nav.file_uploaders.main">File Uploader</span></a>
+            data-i18n="nav.file_uploaders.main">File Uploader</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="file-uploader-dropzone.html"
                data-i18n="nav.file_uploaders.file_uploader_dropzone">Dropzone</a>
@@ -1277,22 +1327,22 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-calendar"></i><span class="menu-title"
-                                      data-i18n="nav.event_calendars.main">Event Calendars</span></a>
+          data-i18n="nav.event_calendars.main">Event Calendars</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.event_calendars.full_calender.main">Full
               Calendar</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="full-calender-basic.html"
-               data-i18n="nav.event_calendars.full_calender.full_calender_basic">Basic</a>
+                   data-i18n="nav.event_calendars.full_calender.full_calender_basic">Basic</a>
               </li>
               <li><a class="menu-item" href="full-calender-events.html"
-               data-i18n="nav.event_calendars.full_calender.full_calender_events">Events</a>
+                   data-i18n="nav.event_calendars.full_calender.full_calender_events">Events</a>
               </li>
               <li><a class="menu-item" href="full-calender-advance.html"
-               data-i18n="nav.event_calendars.full_calender.full_calender_advance">Advance</a>
+                   data-i18n="nav.event_calendars.full_calender.full_calender_advance">Advance</a>
               </li>
               <li><a class="menu-item" href="full-calender-extra.html"
-               data-i18n="nav.event_calendars.full_calender.full_calender_extra">Extra</a>
+                   data-i18n="nav.event_calendars.full_calender.full_calender_extra">Extra</a>
               </li>
             </ul>
           </li>
@@ -1302,7 +1352,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-flag-o"></i><span class="menu-title"
-                                    data-i18n="nav.internationalization.main">Internationalization</span></a>
+        data-i18n="nav.internationalization.main">Internationalization</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="i18n-resources.html"
                data-i18n="nav.internationalization.i18n_resources">Resources</a>
@@ -1326,12 +1376,12 @@
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.charts_maps">Charts &amp; Maps</span><i class="la la-ellipsis-h ft-minus"
-     data-toggle="tooltip"
-     data-placement="right"
-     data-original-title="Charts &amp; Maps"></i>
+            data-toggle="tooltip"
+            data-placement="right"
+            data-original-title="Charts &amp; Maps"></i>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-bar-chart"></i><span class="menu-title"
-                                       data-i18n="nav.google_charts.main">google Charts</span></a>
+           data-i18n="nav.google_charts.main">google Charts</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="google-bar-charts.html"
                data-i18n="nav.google_charts.google_bar_charts">Bar charts</a>
@@ -1354,7 +1404,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-file-photo-o"></i><span class="menu-title"
-                                        data-i18n="nav.echarts.main">Echarts</span></a>
+            data-i18n="nav.echarts.main">Echarts</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="echarts-line-area-charts.html"
                data-i18n="nav.echarts.echarts_line_area_charts">Line &amp; Area charts</a>
@@ -1383,7 +1433,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-area-chart"></i><span class="menu-title"
-                                      data-i18n="nav.chartjs.main">Chartjs</span></a>
+          data-i18n="nav.chartjs.main">Chartjs</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="chartjs-line-charts.html"
                data-i18n="nav.chartjs.chartjs_line_charts">Line charts</a>
@@ -1406,7 +1456,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-line-chart"></i><span class="menu-title"
-                                      data-i18n="nav.d3_charts.main">D3 Charts</span></a>
+          data-i18n="nav.d3_charts.main">D3 Charts</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="d3-line-chart.html" data-i18n="nav.d3_charts.d3_line_chart">Line
               Chart</a>
@@ -1429,7 +1479,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-indent"></i><span class="menu-title"
-                                    data-i18n="nav.c3_charts.main">C3 Charts</span></a>
+        data-i18n="nav.c3_charts.main">C3 Charts</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="c3-line-chart.html" data-i18n="nav.c3_charts.c3_line_chart">Line
               Chart</a>
@@ -1455,7 +1505,7 @@
         </ul>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title"
-                                       data-i18n="nav.chartist.main">Chartist</span></a>
+           data-i18n="nav.chartist.main">Chartist</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="chartist-line-charts.html"
                data-i18n="nav.chartist.chartist_line_charts">Line charts</a>
@@ -1468,51 +1518,45 @@
           </li>
         </ul>
       </li>
-      <li class=" nav-item">
-        <a href="morris-charts.html"><i class="la la-share-alt"></i><span class="menu-title"
-        data-i18n="nav.morris_charts.main">Morris Charts</span></a>
+      <li class=" nav-item"><a href="morris-charts.html"><i class="la la-share-alt"></i><span class="menu-title"
+                  data-i18n="nav.morris_charts.main">Morris Charts</span></a>
       </li>
-      <li class=" nav-item">
-        <a href="#">
-          <i class="la la-bolt"></i>
-            <span class="menu-title"data-i18n="nav.flot_charts.main">Flot Charts</span></a>
-          <ul class="menu-content">
-            <li><a class="menu-item" href="flot-line-charts.html" data-i18n="nav.flot_charts.flot_line_charts">Line
-                charts</a>
-            </li>
-            <li><a class="menu-item" href="flot-bar-charts.html" data-i18n="nav.flot_charts.flot_bar_charts">Bar
-                charts</a>
-            </li>
-            <li><a class="menu-item" href="flot-pie-charts.html" data-i18n="nav.flot_charts.flot_pie_charts">Pie
-                charts</a>
-            </li>
-          </ul>
+      <li class=" nav-item"><a href="#"><i class="la la-bolt"></i><span class="menu-title"
+        data-i18n="nav.flot_charts.main">Flot Charts</span></a>
+        <ul class="menu-content">
+          <li><a class="menu-item" href="flot-line-charts.html" data-i18n="nav.flot_charts.flot_line_charts">Line
+              charts</a>
+          </li>
+          <li><a class="menu-item" href="flot-bar-charts.html" data-i18n="nav.flot_charts.flot_bar_charts">Bar
+              charts</a>
+          </li>
+          <li><a class="menu-item" href="flot-pie-charts.html" data-i18n="nav.flot_charts.flot_pie_charts">Pie
+              charts</a>
+          </li>
+        </ul>
       </li>
-      <li class=" nav-item">
-        <a href="rickshaw-charts.html"><i class="la la-bullseye"></i>
-        <span class="menu-title"
-          data-i18n="nav.rickshaw_charts.main">Rickshaw Charts
-        </span></a>
+      <li class=" nav-item"><a href="rickshaw-charts.html"><i class="la la-bullseye"></i><span class="menu-title"
+                   data-i18n="nav.rickshaw_charts.main">Rickshaw Charts</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-map"></i><span class="menu-title"
-                                   data-i18n="nav.maps.main">Maps</span></a>
+       data-i18n="nav.maps.main">Maps</span></a>
         <ul class="menu-content">
           <li><a class="menu-item" href="#" data-i18n="nav.maps.google_maps.main">google Maps</a>
             <ul class="menu-content">
               <li><a class="menu-item" href="gmaps-basic-maps.html"
-               data-i18n="nav.maps.google_maps.gmaps_basic_maps">Maps</a>
+                   data-i18n="nav.maps.google_maps.gmaps_basic_maps">Maps</a>
               </li>
               <li><a class="menu-item" href="gmaps-services.html"
-               data-i18n="nav.maps.google_maps.gmaps_services">Services</a>
+                   data-i18n="nav.maps.google_maps.gmaps_services">Services</a>
               </li>
               <li><a class="menu-item" href="gmaps-overlays.html"
-               data-i18n="nav.maps.google_maps.gmaps_overlays">Overlays</a>
+                   data-i18n="nav.maps.google_maps.gmaps_overlays">Overlays</a>
               </li>
               <li><a class="menu-item" href="gmaps-routes.html"
-               data-i18n="nav.maps.google_maps.gmaps_routes">Routes</a>
+                   data-i18n="nav.maps.google_maps.gmaps_routes">Routes</a>
               </li>
               <li><a class="menu-item" href="gmaps-utils.html"
-               data-i18n="nav.maps.google_maps.gmaps_utils">Utils</a>
+                   data-i18n="nav.maps.google_maps.gmaps_utils">Utils</a>
               </li>
             </ul>
           </li>
@@ -1522,20 +1566,20 @@
                   Mapael</a>
                 <ul class="menu-content">
                   <li><a class="menu-item" href="vector-maps-mapael-basic.html"
-                   data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_basic">Basic
-                      Maps</a>
+             data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_basic">Basic
+            Maps</a>
                   </li>
                   <li><a class="menu-item" href="vector-maps-mapael-advance.html"
-                   data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_advance">Advance
-                      Maps</a>
+             data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_advance">Advance
+            Maps</a>
                   </li>
                 </ul>
               </li>
               <li><a class="menu-item" href="vector-maps-jvector.html"
-               data-i18n="nav.maps.vector_maps.jvector_maps">jVector Map</a>
+                   data-i18n="nav.maps.vector_maps.jvector_maps">jVector Map</a>
               </li>
               <li><a class="menu-item" href="vector-maps-jvq.html"
-               data-i18n="nav.maps.vector_maps.vector_maps_jvq">JQV Map</a>
+                   data-i18n="nav.maps.vector_maps.vector_maps_jvq">JQV Map</a>
               </li>
             </ul>
           </li>
@@ -1543,9 +1587,9 @@
       </li>
       <li class=" navigation-header">
         <span data-i18n="nav.category.support">Support</span><i class="la la-ellipsis-h ft-minus"
-                                    data-toggle="tooltip"
-                                    data-placement="right"
-                                    data-original-title="Support"></i>
+    data-toggle="tooltip"
+    data-placement="right"
+    data-original-title="Support"></i>
       </li>
       <li class=" nav-item"><a href="http://support.pixinvent.com/"><i class="la la-support"></i><span
             class="menu-title" data-i18n="nav.support_raise_support.main">Raise Support</span></a>
