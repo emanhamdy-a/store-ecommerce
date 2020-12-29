@@ -1,0 +1,13 @@
+$admin=new App\Models\Admin();
+$admin->name='eman';
+$admin->email='eman@example.com';
+$admin->password=Hash::make('12345678');
+$admin->password=bcrypt('12345678');
+$admin->save();
+
+//php artisan make:migration create_settings_table --table="settings"
+//Created Migration: 2020_12_24_012127_create_settings_table
+//php artisan make:migration create_setting_translations_table --table="setting_translations"
+
+php artisan make:model Flight -mfsc
+php artisan db:seed --class=SettingDataBaseSeeder
