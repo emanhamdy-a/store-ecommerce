@@ -5,6 +5,8 @@ use App\Http\Controllers\Dashboard\AdminController;
 use App\Http\Controllers\Dashboard\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\SettingsController;
+use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\Dashboard\MainCategoriesController;
 
 Route::group([
   'prefix' => LaravelLocalization::setLocale(),
@@ -14,7 +16,7 @@ Route::group([
   Route::group(['namespace'=>'Dashboard',
   'middleware'=>'auth:admin','prefix'=>'admin'],function(){
 
-    Route::get('/logout', [LoginController::class, 'logout'])->name('signout');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
     Route::get('/',[DashboardController::class, 'index'])
     ->name('admin.dashboard');
@@ -29,6 +31,36 @@ Route::group([
       ->name('update.shippings.methods');
 
     });
+
+    Route::group(['prefix'=>'profile'],function(){
+
+      Route::get('edit',[ProfileController::class, 'editProfile'])
+      ->name('edit.profile');
+
+      Route::put('update',[ProfileController::class, 'updateprofile'])
+      ->name('update.profile');
+
+    });
+
+    #################### categories routes ####################
+
+    Route::group(['prefix' => 'main_categories'], function () {
+
+      Route::get('/', [MainCategoriesController::class,'index'])
+        ->name('admin.maincategories');
+      Route::get('create', [MainCategoriesController::class,'create'])
+        ->name('admin.maincategories.create');
+      Route::post('store', [MainCategoriesController::class,'store'])
+        ->name('admin.maincategories.store');
+      Route::get('edit/{id}', [MainCategoriesController::class,'edit'])
+        ->name('admin.maincategories.edit');
+      Route::post('update/{id}', [MainCategoriesController::class,'update'])
+        ->name('admin.maincategories.update');
+      Route::get('delete/{id}', [MainCategoriesController::class,'destroy'])
+        ->name('admin.maincategories.delete');
+    });
+    ##################### end categories    #####################
+
   });
 
 

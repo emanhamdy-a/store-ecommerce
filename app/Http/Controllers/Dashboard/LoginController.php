@@ -12,9 +12,13 @@ class LoginController extends Controller
   }
 
   public function logout(){
-    //\Auth::logout();
-    auth()->guard('admin')->logout();
+    $guard=$this->getGaurd();
+    $guard->logout();
 		return redirect('/admin/login');
+  }
+
+  private function getGaurd(){
+    return auth('admin');
   }
 
   public function postlogin(AdminLoginRequest $request){

@@ -22,29 +22,56 @@
     <div class="navbar-container content">
       <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="nav navbar-nav mr-auto float-left">
-          <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs"
-                                href="#"><i class="ft-menu"></i></a></li>
-          <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link nav-menu-main menu-toggle hidden-xs"
+              href="#"><i class="ft-menu"></i></a></li>
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link nav-link-expand" href="#"><i
                 class="ficon ft-maximize"></i></a></li>
         </ul>
         <ul class="nav navbar-nav float-right">
           <li class="dropdown dropdown-user nav-item">
             <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
         <span class="mr-1">مرجبا
-          <span
-            class="user-name text-bold-700">  Ahmed Emam</span>
+          <span class="user-name text-bold-700">
+            {{auth('admin')->user()->name}}
+          </span>
         </span>
-              <span class="avatar avatar-online">
-          <img  style="height: 35px;" src="" alt="avatar"><i></i></span>
+            <!-- <span class="avatar avatar-online">
+              <img  style="height: 35px;" src="" alt="avatar"><i></i>
+            </span> -->
             </a>
-            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
+            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile')}}"><i
                   class="ft-user"></i> تعديل الملف الشحصي </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{{route('signout')}}"><i class="ft-power"></i> تسجيل
+              <a class="dropdown-item" href="{{route('admin.logout')}}">
+                <i class="ft-power"></i> تسجيل
                 الخروج </a>
             </div>
           </li>
+          <li class="dropdown dropdown-user nav-item">
+            <a class="dropdown-toggle nav-link
+                dropdown-user-link"
+                href="#" data-toggle="dropdown">
+              <span class="mr-1">
+                <span class="user-name text-bold-700">
+                  {{App::getLocale()}}
+                  <i class="ft-chevron-down"></i>
+                </span>
+              </span>
 
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                  <a class="dropdown-item" rel="alternate"
+                    hreflang="{{ $localeCode }}"
+                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                      {{ $properties['native'] }}
+                  </a>
+                  <div class="dropdown-divider"></div>
+                @endforeach
+            </div>
+          </li>
           <li class="dropdown dropdown-notification nav-item">
             <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
               <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>

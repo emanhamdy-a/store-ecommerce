@@ -40,11 +40,13 @@ class SettingsController extends Controller
       DB::beginTransaction();
       $shipping_method->update(['plain_value' => $request->plain_value]);
       //save translations
+
       $shipping_method->value = $request->value;
-      // $shipping_method->translation($request->lang)->value = $request->value;
+      // $shipping_method->translations('en')->value = $request->value;
       $shipping_method->save();
 
       DB::commit();
+
       return redirect()->back()->with(['success' => 'تم التحديث بنجاح']);
     } catch (\Exception $ex) {
       return redirect()->back()->with(['error' => 'هناك خطا ما يرجي المحاولة فيما بعد']);

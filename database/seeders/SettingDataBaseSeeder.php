@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Setting;
+use Illuminate\Database\Seeder;
 class SettingDataBaseSeeder extends Seeder
 {
   // php artisan make:seeder SettingDataBaseSeeder
@@ -26,10 +26,10 @@ class SettingDataBaseSeeder extends Seeder
       'local_pickup cost'=>'0',
       'flat_rate_cost'=>'0',
       'translatable'=>[
-        'store_name'=>'fleet cart',
-        'free_shipping_label'=>'Free Shipping',
-        'local_label'=>'Local shipping',
-        'outer_label'=>'outer shipping',
+        'store_name'=>'فاترينا',
+        'free_shipping_label'=>'توصيل مجاني',
+        'local_label'=>'توصيل محلي',
+        'outer_label'=>'توصيل خارجي',
       ]
     ]);
   }
